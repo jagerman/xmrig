@@ -161,8 +161,10 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 find_package(UV REQUIRED)
 
 if (WITH_RANDOMX)
-    find_package(RandomX REQUIRED)
-    include_directories(${RANDOMX_INCLUDE_DIR})
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/RandomXL)
+    include_directories(${CMAKE_CURRENT_SOURCE_DIR}/RandomXL/src)
+
+    set(RANDOMX_LIBRARIES randomx)
 
     add_definitions(/DXMRIG_ALGO_RANDOMX)
 else()

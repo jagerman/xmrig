@@ -73,6 +73,8 @@ static AlgoData const algorithms[] = {
 #   ifdef XMRIG_ALGO_RANDOMX
     { "randomx/wow",           "rx/wow",       xmrig::RANDOM_X,          xmrig::VARIANT_RX_WOW },
     { "randomx",               "rx",           xmrig::RANDOM_X,          xmrig::VARIANT_RX_WOW },
+    { "randomx/loki",          "rx/loki",      xmrig::RANDOM_X,          xmrig::VARIANT_RX_LOKI },
+    { "randomx",               "rx",           xmrig::RANDOM_X,          xmrig::VARIANT_RX_LOKI },
 #   endif
 
 #   ifdef XMRIG_ALGO_CN_LITE
@@ -145,6 +147,7 @@ static const char *variants[] = {
     "zls",
     "double",
     "rx/wow",
+    "rx/loki",
 };
 
 

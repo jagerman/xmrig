@@ -167,6 +167,12 @@ void MultiWorker<N>::start()
                 Workers::updateDataset(m_state.job.seedHash(), m_totalWays);
                 randomx_calculate_hash(m_rx_vm, m_state.blob, m_state.job.size(), m_hash);
             }
+            else if (v == xmrig::VARIANT_RX_LOKI) {
+                // FIXME: same as above, but needs to be different!
+                allocateRandomX_VM();
+                Workers::updateDataset(m_state.job.seedHash(), m_totalWays);
+                randomx_calculate_hash(m_rx_vm, m_state.blob, m_state.job.size(), m_hash);
+            }
             else
 #           endif
             {
